@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "BOWLER-Regular";
+  src: url("../fonts/bowler-regular.eot"); /* IE 9 Compatibility Mode */
+  src: url("../fonts/bowler-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("../fonts/bowler-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/bowler-regular.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("../fonts/bowler-regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/bowler-regular.svg#bowler-regular")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
