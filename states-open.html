@@ -34,35 +34,63 @@
                 <span>100LEVELs</span>
                 <p>Интерактивный курс английского</p>
               </a>
-              <nav class="navbar nav-head navbar-expand-lg">
+
+              <nav class="navbar navbar-expand-lg nav-head">
                 <div class="container-fluid">
                   <button
                     class="navbar-toggler"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
                     aria-label="Toggle navigation"
                   >
                     <span class="navbar-toggler-icon">
                       <img src="images/1.svg" alt="" />
                     </span>
                   </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"
-                          >Курс английского</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Тренажер</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
-                      </li>
-                    </ul>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                  >
+                    <div class="offcanvas-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div class="header-right">
+                        <a href="#" class="header-vhod">Вход</a>
+                        <a href="#" class="header-registration">Регистрация</a>
+                      </div>
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="states.html"
+                            >Курс английского</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="states-open.html"
+                            >Тренажер</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                      </ul>
+                      <div class="canvas-logo">
+                        <span>100LEVELs</span>
+                        <p>Интерактивный курс английского</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </nav>
@@ -90,7 +118,7 @@
         </div>
         <section class="open-states section">
           <div class="container-fluid">
-            <h1 class="open-states-title">Статьи</h1>
+            <h1 class="open-states-title title">Статьи</h1>
             <div class="open-states-content">
               <h3>Пошаговое изучение слов</h3>
               <p>
@@ -145,6 +173,24 @@
             </div>
           </div>
         </section>
+
+        <section class="section states-banner">
+          <div class="container-fluid">
+            <div class="states-banner-wrap">
+              <div class="states-banner-info">
+                <div class="states-banner-title">Учите английский легко</div>
+                <div class="states-banner-text">
+                  Задания в упражнениях состоят только из тех слов, которые ты
+                  уже выучил ранее, не нужно постоянно обращаться к словарю.
+                </div>
+              </div>
+              <div class="states-banner-img">
+                <img src="images/states/obj-2.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="section states-other">
           <div class="container-fluid">
             <h2 class="states-other-title">Другие статьи</h2>
@@ -207,6 +253,84 @@
                     помогут тебе закрепить свои знания.
                   </p>
                   <a href="#" class="btns states-btn">Перейти</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="state-other-mobile">
+            <!-- Slider main container -->
+            <div class="swiper-container swiper swiper-other">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="states-item">
+                    <div class="states-img">
+                      <img src="images/states/states-1.png" alt="" />
+                    </div>
+                    <div class="states-info">
+                      <div class="states-title">
+                        Как выучить английский за 100 уровней
+                      </div>
+                      <p>
+                        На каждом уровне есть разнообразные упражнения, которые
+                        помогут тебе закрепить свои знания.
+                      </p>
+                      <a href="#" class="btns states-btn">Перейти</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="states-item">
+                    <div class="states-img">
+                      <img src="images/states/states-2.png" alt="" />
+                    </div>
+                    <div class="states-info">
+                      <div class="states-title">
+                        Изучение английского языка без преподавателя
+                      </div>
+                      <p>
+                        На каждом уровне есть разнообразные упражнения, которые
+                        помогут тебе закрепить свои знания.
+                      </p>
+                      <a href="#" class="btns states-btn">Перейти</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="states-item">
+                    <div class="states-img">
+                      <img src="images/states/states-1.png" alt="" />
+                    </div>
+                    <div class="states-info">
+                      <div class="states-title">
+                        Как выучить английский за 100 уровней
+                      </div>
+                      <p>
+                        На каждом уровне есть разнообразные упражнения, которые
+                        помогут тебе закрепить свои знания.
+                      </p>
+                      <a href="#" class="btns states-btn">Перейти</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="states-item">
+                    <div class="states-img">
+                      <img src="images/states/states-2.png" alt="" />
+                    </div>
+                    <div class="states-info">
+                      <div class="states-title">
+                        Изучение английского языка без преподавателя
+                      </div>
+                      <p>
+                        На каждом уровне есть разнообразные упражнения, которые
+                        помогут тебе закрепить свои знания.
+                      </p>
+                      <a href="#" class="btns states-btn">Перейти</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

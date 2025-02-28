@@ -55,3 +55,10 @@ const swiperblocks = new Swiper(".blocks-wrap-mobile-swiper", {
 
   // Navigation arrows
 });
+
+const swiperOther = new Swiper(".swiper-other", {
+  // Optional parameters
+  loop: false,
+  spaceBetween: 20,
+  slidesPerView: 1.5,
+});

@@ -34,38 +34,63 @@
                 <span>100LEVELs</span>
                 <p>Интерактивный курс английского</p>
               </a>
-              <nav class="navbar nav-head navbar-expand-lg">
+
+              <nav class="navbar navbar-expand-lg nav-head">
                 <div class="container-fluid">
                   <button
                     class="navbar-toggler"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
                     aria-label="Toggle navigation"
                   >
                     <span class="navbar-toggler-icon">
                       <img src="images/1.svg" alt="" />
                     </span>
                   </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a
-                          class="nav-link active"
-                          aria-current="page"
-                          href="states.html"
-                          >Курс английского</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="states-open.html">Тренажер</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
-                      </li>
-                    </ul>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                  >
+                    <div class="offcanvas-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div class="header-right">
+                        <a href="#" class="header-vhod">Вход</a>
+                        <a href="#" class="header-registration">Регистрация</a>
+                      </div>
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="states.html"
+                            >Курс английского</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="states-open.html"
+                            >Тренажер</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                      </ul>
+                      <div class="canvas-logo">
+                        <span>100LEVELs</span>
+                        <p>Интерактивный курс английского</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </nav>
