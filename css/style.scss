@@ -230,6 +230,10 @@ main {
   display: flex;
   gap: 25px;
   align-items: center;
+  position: absolute;
+  left: 30px;
+  bottom: 75px;
+  z-index: 2;
 }
 
 .hero-swiper {
@@ -760,8 +764,8 @@ main {
 
 .price-wrap {
   gap: 40px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .price-item {
@@ -891,6 +895,7 @@ main {
 .price-item:hover {
   border-color: #0057ff;
   transform: scaleY(1.1);
+  transform-origin: top bottom;
 }
 
 .price {
@@ -1095,6 +1100,7 @@ main {
   line-height: 111%;
   color: #0f0f0f;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .text-content p {
@@ -1103,6 +1109,15 @@ main {
   font-weight: 400;
   line-height: 111%;
   color: #0f0f0f;
+}
+
+.text-content li {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 111%;
+  color: #0f0f0f;
+  margin-bottom: 10px;
 }
 
 .question {
@@ -1664,11 +1679,33 @@ main {
   justify-content: center;
   width: 23px;
   height: 23px;
-  border-radius: 2px;
-  background: #4db45f;
   position: absolute;
   top: 20px;
   right: 15px;
+}
+
+.lesson-item.lesson-item--succes .lesson-check {
+  right: auto;
+  left: 13px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  color: #4db45f;
+  width: auto;
+  height: auto;
+}
+
+.lesson-item.lesson-item--working .lesson-check {
+  right: auto;
+  left: 15px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  color: #ff5a2a;
+  width: auto;
+  height: auto;
 }
 
 .lesson-check img {
@@ -1702,6 +1739,14 @@ main {
   display: flex;
 }
 
+.lesson-item--succes .lesson-check {
+  display: flex;
+}
+
+.lesson-item--working .lesson-check {
+  display: flex;
+}
+
 .side-block .accordion-item {
   background: transparent;
   border: none;
@@ -1714,7 +1759,6 @@ main {
 
 .side-levels {
   padding: 0;
-  padding-bottom: 50px;
 }
 
 .lesson {
@@ -1887,11 +1931,21 @@ main {
 }
 
 .promokod-form input {
+  display: block;
+  width: 100%;
+  max-width: 263px;
   border-radius: 5px;
   background: #fff;
-  max-width: 305px;
-  width: 100%;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 111%;
+  color: #000;
   border: none;
+  padding: 10px;
+}
+
+.personal-form input {
 }
 
 .states-banner {
@@ -1943,7 +1997,37 @@ main {
   display: none;
 }
 
+.side-block .accordion-item {
+  padding-bottom: 50px;
+}
+
+.side-block .side-accord {
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+/* хром, сафари */
+.side-block .side-accord::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ie 10+ */
+.side-block .side-accord {
+  -ms-overflow-style: none;
+}
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.side-block .side-accord {
+  overflow: -moz-scrollbars-none;
+}
+
 // ---------------media ------------------------
+
+@media (max-width: 1690px) {
+  .price-title-text {
+    font-size: 28px;
+  }
+}
 
 @media (max-width: 1500px) {
   .form-info-img {
@@ -1977,10 +2061,16 @@ main {
   }
   .price-wrap {
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
   }
   .states-banner-img {
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+  .price-title-text {
+    font-size: 37px;
   }
 }
 
@@ -2698,10 +2788,16 @@ main {
   }
   .text-content h3 {
     font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .text-content p {
     font-size: 15px;
+  }
+  .text-content li {
+    font-size: 15px;
+    margin-bottom: 10px;
   }
   .text {
     margin-bottom: 50px;
@@ -2970,7 +3066,7 @@ main {
     grid-template-columns: 1fr;
   }
   .lesson-item {
-    padding-top: 25px;
+    padding-top: 45px;
     padding-bottom: 20px;
   }
   .lesson-item-title {
@@ -3072,6 +3168,15 @@ main {
 
   .state-other-wrapper {
     display: none;
+  }
+
+  .lesson-item.lesson-item--succes .lesson-check {
+    left: auto;
+    right: 15px;
+  }
+  .lesson-item.lesson-item--working .lesson-check {
+    left: auto;
+    right: 15px;
   }
 }
 
