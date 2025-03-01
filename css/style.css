@@ -2011,6 +2011,10 @@ main {
   padding-bottom: 50px;
 }
 
+.side-block .accordion-item:has(button.collapsed) {
+  padding-bottom: 0;
+}
+
 .side-block .side-accord {
   max-height: 440px;
   overflow-y: auto;
