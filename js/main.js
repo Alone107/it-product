@@ -62,3 +62,53 @@ const swiperOther = new Swiper(".swiper-other", {
   spaceBetween: 20,
   slidesPerView: 1.5,
 });
+
+// Получаем все контейнеры с кнопками
+const exerciseModeContainers = document.querySelectorAll(".exercise-mode-btns");
+
+// Добавляем обработчик клика для каждого контейнера
+exerciseModeContainers.forEach((container) => {
+  container.addEventListener("click", function (e) {
+    // Находим элемент, по которому кликнули
+    const clickedElement = e.target.closest(
+      ".exercise-mode-link-voice, .exercise-mode-link-keyboard"
+    );
+
+    if (clickedElement) {
+      // Удаляем активный класс со всех элементов в контейнере
+      container
+        .querySelectorAll(
+          ".exercise-mode-link-voice, .exercise-mode-link-keyboard"
+        )
+        .forEach((element) => element.classList.remove("active"));
+
+      // Добавляем активный класс кликнутому элементу
+      clickedElement.classList.add("active");
+    }
+  });
+});
+
+const exerciseDificultContainers = document.querySelectorAll(
+  ".exercise-difficulty"
+);
+
+// Добавляем обработчик клика для каждого контейнера
+exerciseDificultContainers.forEach((container) => {
+  container.addEventListener("click", function (e) {
+    // Находим элемент с текстом внутри контейнера
+    const textSpan = this.querySelector(".exercise-difficulty-text span");
+
+    const CircleSpan = this.querySelector(".exercise-difficulty-row");
+
+    // Меняем текст в зависимости от текущего состояния
+    if (this.classList.contains("active")) {
+      textSpan.textContent = "Легко";
+    } else {
+      textSpan.textContent = "Сложно";
+    }
+
+    // Добавляем/удаляем активный класс
+    this.classList.toggle("active");
+    CircleSpan.classList.toggle("active");
+  });
+});
